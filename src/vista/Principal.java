@@ -32,8 +32,8 @@ public class Principal extends PApplet{
 	
 	@Override
 	public void mousePressed() {
-		control.añadirCuadrados();
-		control.añadirCirculos();
+		control.añadirCuadrados(this);
+		control.añadirCirculos(this);
 		
 		control.pararMoverCuadrados();
 		control.pararMoverCirculos();

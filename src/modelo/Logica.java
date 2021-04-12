@@ -20,14 +20,16 @@ public class Logica {
 		listaTriangulos = new ArrayList<>();
 	}
 
-	public void añadirCuadrados() {
-		// TODO Auto-generated method stub
-		
+	public void añadirCuadrados(PApplet app) {
+		int tamaño = (int)(Math.random()*30*40);
+		int posicionY = (int)(Math.random()*50*450);
+		listaCuadrados.add(new Cuadrado(-50, posicionY, tamaño, app));
 	}
 
-	public void añadirCirculos() {
-		// TODO Auto-generated method stub
-		
+	public void añadirCirculos(PApplet app) {
+		int tamaño = (int)(Math.random()*20*40);
+		int posicionX = (int)(Math.random()*0*450);
+		listaCirculos.add(new Circulo(posicionX, -50, tamaño, app));
 	}
 
 	public void dibujarCuadrados(PApplet app) {

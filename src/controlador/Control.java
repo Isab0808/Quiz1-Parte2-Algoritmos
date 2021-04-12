@@ -11,12 +11,12 @@ public class Control {
 		logica = new Logica();
 	}
 
-	public void añadirCuadrados() {
-		logica.añadirCuadrados();
+	public void añadirCuadrados(PApplet app) {
+		logica.añadirCuadrados(app);
 	}
 
-	public void añadirCirculos() {
-		logica.añadirCirculos();
+	public void añadirCirculos(PApplet app) {
+		logica.añadirCirculos(app);
 	}
 
 	public void dibujarCuadrados(PApplet app) {
