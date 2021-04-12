@@ -1,5 +1,8 @@
 package modelo;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 
 import processing.core.PApplet;
@@ -13,6 +16,7 @@ public class Logica {
 	public ArrayList<Cuadrado>listaCuadrados;
 	public ArrayList<Circulo>listaCirculos;
 	public ArrayList<Triangulo>listaTriangulos;
+	private ArrayList <String> texto;
 
 	public Logica() {
 		listaCuadrados = new ArrayList<>();
@@ -98,6 +102,38 @@ public class Logica {
 				listaTriangulos.add(new Triangulo(posicionX, -50, tamaño, valor, app));
 				System.out.println("CHOCO");}}
 	}
+	}
+	
+	public void texto() {
+		texto = new ArrayList<String>();
+		try {
+			cargarArchivo();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void cargarArchivo() throws Exception {
+		FileReader fr = null;
+		File prueba = new File("data/texto.txt");
+		try {
+			fr = new FileReader(prueba);
+			BufferedReader br = new BufferedReader(fr);
+			String linea;
+	        while((linea=br.readLine())!=null)
+	          texto.add(linea);
+		} catch (Exception e) {
+			 e.printStackTrace();
+		}
+		finally{
+			         try{                    
+			            if( null != fr ){   
+			               fr.close();     
+			            }                  
+			         }catch (Exception e2){ 
+			            e2.printStackTrace();
+			         }
+			      }
 	}
 
 }
