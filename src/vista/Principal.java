@@ -1,7 +1,11 @@
+package vista;
+import controlador.Control;
 import processing.core.PApplet;
 
 public class Principal extends PApplet{
 
+	private Control control;
+	
 	public static void main(String[] args) {
 		PApplet.main("Principal");
 	}
@@ -13,6 +17,7 @@ public class Principal extends PApplet{
 	
 	@Override
 	public void setup() {
+		control = new Control();
 		
 	}
 	
@@ -20,5 +25,12 @@ public class Principal extends PApplet{
 	public void draw() {
 		
 	}
+	
+	@Override
+	public void mousePressed() {
+		control.añadirFiguras();
+	}
+	
+	
 
 }
