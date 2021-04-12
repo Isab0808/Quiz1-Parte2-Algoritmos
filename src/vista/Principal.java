@@ -7,7 +7,7 @@ public class Principal extends PApplet{
 	private Control control;
 	
 	public static void main(String[] args) {
-		PApplet.main("Principal");
+		PApplet.main(Principal.class.getName());
 	}
 
 	@Override
