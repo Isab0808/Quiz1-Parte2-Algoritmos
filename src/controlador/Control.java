@@ -1,6 +1,7 @@
 package controlador;
 
 import modelo.Logica;
+import processing.core.PApplet;
 
 public class Control {
 
@@ -18,17 +19,17 @@ public class Control {
 		logica.añadirCirculos();
 	}
 
-	public void dibujarCuadrados() {
-		logica.dibujarCuadrados();
+	public void dibujarCuadrados(PApplet app) {
+		logica.dibujarCuadrados(app);
 		
 	}
 
-	public void dibujarCirculos() {
-		logica.dibujarCirculos();
+	public void dibujarCirculos(PApplet app) {
+		logica.dibujarCirculos(app);
 	}
 
-	public void dibujarTriangulos() {
-		logica.dibujarTriangulos();
+	public void dibujarTriangulos(PApplet app) {
+		logica.dibujarTriangulos(app);
 		
 	}
 

@@ -4,8 +4,8 @@ import processing.core.PApplet;
 
 public class Cuadrado {
 
+	private Logica miLogica;
 public final static int SPEED = 3;
-	
 	private int posicionX;
 	private int posicionY;
 	private int dir;
