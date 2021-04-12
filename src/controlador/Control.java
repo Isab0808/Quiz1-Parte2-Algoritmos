@@ -33,18 +33,18 @@ public class Control {
 		
 	}
 
-	public void pararMoverCuadrados() {
-		logica.pararMoverCuadrados();
+	public void pararMoverCuadrados(PApplet app) {
+		logica.pararMoverCuadrados(app);
 		
 	}
 
-	public void pararMoverCirculos() {
-		logica.pararMoverCirculos();
+	public void pararMoverCirculos(PApplet app) {
+		logica.pararMoverCirculos(app);
 		
 	}
 
-	public void pararMoverTriangulos() {
-		logica.pararMoverTriangulos();
+	public void pararMoverTriangulos(PApplet app) {
+		logica.pararMoverTriangulos(app);
 		
 	}
 

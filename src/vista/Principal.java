@@ -12,7 +12,7 @@ public class Principal extends PApplet{
 
 	@Override
 	public void settings() {
-		
+		size(500, 500);
 	}
 	
 	@Override
@@ -23,6 +23,8 @@ public class Principal extends PApplet{
 	
 	@Override
 	public void draw() {
+		background(255);
+		
 		control.dibujarCuadrados(this);
 		control.dibujarCirculos(this);
 		control.dibujarTriangulos(this);
@@ -35,9 +37,9 @@ public class Principal extends PApplet{
 		control.añadirCuadrados(this);
 		control.añadirCirculos(this);
 		
-		control.pararMoverCuadrados();
-		control.pararMoverCirculos();
-		control.pararMoverTriangulos();
+		control.pararMoverCuadrados(this);
+		control.pararMoverCirculos(this);
+		control.pararMoverTriangulos(this);
 	}
 	
 	

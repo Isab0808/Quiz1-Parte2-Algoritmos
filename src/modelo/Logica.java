@@ -21,14 +21,14 @@ public class Logica {
 	}
 
 	public void añadirCuadrados(PApplet app) {
-		int tamaño = (int)(Math.random()*30*40);
-		int posicionY = (int)(Math.random()*50*450);
+		int tamaño = (int)(Math.random()*40);
+		int posicionY = (int)(Math.random()*450);
 		listaCuadrados.add(new Cuadrado(-50, posicionY, tamaño, app));
 	}
 
 	public void añadirCirculos(PApplet app) {
-		int tamaño = (int)(Math.random()*20*40);
-		int posicionX = (int)(Math.random()*0*450);
+		int tamaño = (int)(Math.random()*40);
+		int posicionX = (int)(Math.random()*450);
 		listaCirculos.add(new Circulo(posicionX, -50, tamaño, app));
 	}
 
@@ -50,19 +50,37 @@ public class Logica {
 		}
 	}
 
-	public void pararMoverCuadrados() {
-		// TODO Auto-generated method stub
-		
+	public void pararMoverCuadrados(PApplet app) {
+		for (int i = 0; i < listaCuadrados.size(); i++) {
+			if (app.mouseX > (listaCuadrados.get(i).getPosicionX() - (listaCuadrados.get(i).getTamaño() / 2)) && 
+				app.mouseX < (listaCuadrados.get(i).getPosicionX() + (listaCuadrados.get(i).getTamaño() / 2)) && 
+				app.mouseY > (listaCuadrados.get(i).getPosicionY() - (listaCuadrados.get(i).getTamaño() / 2)) && 
+				app.mouseY < (listaCuadrados.get(i).getPosicionY() + (listaCuadrados.get(i).getTamaño() / 2))) {
+				listaCuadrados.get(i).setmover(!listaCuadrados.get(i).estadoCuadrado());
+				}
+			}
 	}
 
-	public void pararMoverCirculos() {
-		// TODO Auto-generated method stub
-		
+	public void pararMoverCirculos(PApplet app) {
+		for (int i = 0; i < listaCirculos.size(); i++) {
+			if (app.mouseX > (listaCirculos.get(i).getPosicionX() - (listaCirculos.get(i).getTamaño() / 2)) && 
+				app.mouseX < (listaCirculos.get(i).getPosicionX() + (listaCirculos.get(i).getTamaño() / 2)) && 
+				app.mouseY > (listaCirculos.get(i).getPosicionY() - (listaCirculos.get(i).getTamaño() / 2)) && 
+				app.mouseY < (listaCirculos.get(i).getPosicionY() + (listaCirculos.get(i).getTamaño() / 2))) {
+				listaCirculos.get(i).setmover(!listaCirculos.get(i).estadoCuadrado());
+				}
+			}
 	}
 
-	public void pararMoverTriangulos() {
-		// TODO Auto-generated method stub
-		
+	public void pararMoverTriangulos(PApplet app) {
+		for (int i = 0; i < listaTriangulos.size(); i++) {
+			if (app.mouseX > (listaTriangulos.get(i).getPosicionX() - (listaTriangulos.get(i).getTamaño() / 2)) && 
+				app.mouseX < (listaTriangulos.get(i).getPosicionX() + (listaTriangulos.get(i).getTamaño() / 2)) && 
+				app.mouseY > (listaTriangulos.get(i).getPosicionY() - (listaTriangulos.get(i).getTamaño() / 2)) && 
+				app.mouseY < (listaTriangulos.get(i).getPosicionY() + (listaTriangulos.get(i).getTamaño() / 2))) {
+				listaTriangulos.get(i).setmover(!listaTriangulos.get(i).isEstadoTriangulo());
+				}
+			}
 	}
 
 	public void validarChoque() {
