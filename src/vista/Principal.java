@@ -23,12 +23,21 @@ public class Principal extends PApplet{
 	
 	@Override
 	public void draw() {
+		control.dibujarCuadrados();
+		control.dibujarCirculos();
+		control.dibujarTriangulos();
 		
+		control.validarChoque();
 	}
 	
 	@Override
 	public void mousePressed() {
-		control.añadirFiguras();
+		control.añadirCuadrados();
+		control.añadirCirculos();
+		
+		control.pararMoverCuadrados();
+		control.pararMoverCirculos();
+		control.pararMoverTriangulos();
 	}
 	
 	
