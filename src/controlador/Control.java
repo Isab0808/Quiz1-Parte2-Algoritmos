@@ -48,8 +48,8 @@ public class Control {
 		
 	}
 
-	public void validarChoque() {
-		logica.validarChoque();
+	public void validarChoque(PApplet app) {
+		logica.validarChoque(app);
 		
 	}
 

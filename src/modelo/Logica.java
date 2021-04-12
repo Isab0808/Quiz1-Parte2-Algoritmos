@@ -83,9 +83,21 @@ public class Logica {
 			}
 	}
 
-	public void validarChoque() {
-		// TODO Auto-generated method stub
-		
+	public void validarChoque(PApplet app) {
+		for (int i = 0; i < listaCirculos.size(); i++) {
+			for (int j = 0; j < listaCuadrados.size(); j++) {
+				
+				int tamaño = (int)(Math.random()*40);
+				int posicionX = (int)(Math.random()*450);
+				
+				if(app.dist(listaCuadrados.get(j).getPosicionX(), listaCuadrados.get(j).getPosicionY(),
+				listaCirculos.get(i).getPosicionX(), listaCirculos.get(i).getPosicionY())<= listaCirculos.get(i).getTamaño()) {
+					int valor = listaCirculos.get(i).getValor() + listaCuadrados.get(j).getValor();
+				listaCirculos.remove(i);
+				listaCuadrados.remove(j);
+				listaTriangulos.add(new Triangulo(posicionX, -50, tamaño, valor, app));
+				System.out.println("CHOCO");}}
+	}
 	}
 
 }

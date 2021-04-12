@@ -29,7 +29,7 @@ public class Principal extends PApplet{
 		control.dibujarCirculos(this);
 		control.dibujarTriangulos(this);
 		
-		control.validarChoque();
+		control.validarChoque(this);
 	}
 	
 	@Override
