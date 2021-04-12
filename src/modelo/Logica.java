@@ -21,14 +21,14 @@ public class Logica {
 	}
 
 	public void añadirCuadrados(PApplet app) {
-		int tamaño = (int)(Math.random()*40);
-		int posicionY = (int)(Math.random()*450);
+		int tamaño = (int)(Math.random()*40+20);
+		int posicionY = (int)(Math.random()*420+50);
 		listaCuadrados.add(new Cuadrado(-50, posicionY, tamaño, app));
 	}
 
 	public void añadirCirculos(PApplet app) {
-		int tamaño = (int)(Math.random()*40);
-		int posicionX = (int)(Math.random()*450);
+		int tamaño = (int)(Math.random()*60+20);
+		int posicionX = (int)(Math.random()*450+50);
 		listaCirculos.add(new Circulo(posicionX, -50, tamaño, app));
 	}
 
@@ -87,8 +87,8 @@ public class Logica {
 		for (int i = 0; i < listaCirculos.size(); i++) {
 			for (int j = 0; j < listaCuadrados.size(); j++) {
 				
-				int tamaño = (int)(Math.random()*40);
-				int posicionX = (int)(Math.random()*450);
+				int tamaño = (int)(Math.random()*40+20);
+				int posicionX = (int)(Math.random()*450+50);
 				
 				if(app.dist(listaCuadrados.get(j).getPosicionX(), listaCuadrados.get(j).getPosicionY(),
 				listaCirculos.get(i).getPosicionX(), listaCirculos.get(i).getPosicionY())<= listaCirculos.get(i).getTamaño()) {

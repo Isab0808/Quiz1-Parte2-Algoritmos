@@ -34,12 +34,16 @@ public class Principal extends PApplet{
 	
 	@Override
 	public void mousePressed() {
+		if (mouseButton == RIGHT) {
 		control.añadirCuadrados(this);
 		control.añadirCirculos(this);
+		}
 		
+		if (mouseButton == LEFT) {
 		control.pararMoverCuadrados(this);
 		control.pararMoverCirculos(this);
 		control.pararMoverTriangulos(this);
+		}
 	}
 	
 	

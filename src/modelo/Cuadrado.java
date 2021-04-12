@@ -36,7 +36,7 @@ public final static int SPEED = 3;
 		app.rect(posicionX, posicionY, tamaño, tamaño);
 		app.textSize(15);
 		app.fill(0);
-		app.text(valor, posicionX-5, posicionY+5);
+		app.text(valor, posicionX+10, posicionY+10);
 		mover();
 	}
 	
